@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <div class='container'>
+            <h2>Pomodoro Clock</h2>
+            <div class="row">
+                <div id='break'>
+                    <div id='break-label'>Break Length</div>
+                    <div class='row'>
+                        <button id='break-decrement'  class='btn btn-lg' onclick='decrementBreak()'>-</button>
+                        <div id='break-length'>5</div>
+                        <button id='break-increment' class='btn btn-lg' onclick='incrementBreak()'>+</button>
+                    </div>
+                </div>
+                <div id="session">
+                    <div id='session-label'>Session Length</div>
+                    <div class='row'>
+                        <button id='session-decrement'  class='btn btn-sm' onclick='sessionMinus()'>-</button>
+                        <div id='session-length'>25</div>
+                        <button id='session-increment' class='btn btn-sm' onclick='sessionPlus()'>+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id='timer-label'>Session</div>
+            <div id='time-left'>25:00</div>
+            <audio id='beep'><source src='./beep.mp3'></source></audio>
+
+            <div class='row' id='control'>
+                <button id='start_stop' onclick='toggle()'><img src='./play_pause.png' width='60px'></img></button>
+                <button id='reset' onclick='reset()'><img src='./reset.png' width='42px'></button>
+            </div>
+        </div>
+    </body>
+    <script src='./index.js'></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
+
+
+
